@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Калькулятор диагонали экрана: перевод дюймов в см и таблица размеров</title>
+  <meta name="description" content="Онлайн-калькулятор диагонали экрана: переводите дюймы в сантиметры и обратно. Таблица популярных размеров для ТВ, мониторов и проекторов. Форматы 16:9, 4:3, 21:9">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://interfantasy.ru/screen-calculator">
+  <meta property="og:title" content="Калькулятор диагонали экрана: перевод дюймов в см и таблица размеров">
+  <meta property="og:description" content="Онлайн-калькулятор диагонали экрана: переводите дюймы в сантиметры и обратно. Таблица популярных размеров для ТВ, мониторов и проекторов. Форматы 16:9, 4:3, 21:9">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://interfantasy.ru/screen-calculator">
+  <meta property="og:site_name" content="InterFantasy.ru">
+  <meta name="theme-color" content="#f6f9fa">
+  <link rel="icon" href="https://tramlex.github.io/interfantasy-preview/media/favicon.svg" type="image/svg+xml">
+  
+  <style>@font-face{font-family:Manrope;src:url('https://tramlex.github.io/interfantasy-preview/media/manrope-cyrillic.woff2') format('woff2');font-weight:200 800;font-style:normal;font-display:swap;unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Manrope;src:url('https://tramlex.github.io/interfantasy-preview/media/manrope-latin.woff2') format('woff2');font-weight:200 800;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--paper:#fafaf8;--ink:#20221f;--muted:#686b63;--line:#dddfd7;--panel:#f0f1ec;--cyan:#00ffff;--ease:cubic-bezier(.22,1,.36,1);--scene-progress:0;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body.dialog-open,body.menu-open{overflow:hidden}
+::selection{background:#b6efeb;color:#102521}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{color:inherit;cursor:pointer}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{border:0}
+button:disabled{cursor:default}
+img{display:block;max-width:100%;height:auto}
+svg{display:block}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,h3{text-wrap:balance}
+h1,h2{font-weight:500;letter-spacing:-.055em;line-height:1.08}
+h1{font-size:clamp(46px,5.9vw,90px)}
+h2{font-size:clamp(38px,4.05vw,62px)}
+h3{font-size:25px;font-weight:550;line-height:1.25;letter-spacing:-.035em}
+p{text-wrap:pretty}
+:focus-visible{outline:2px solid #147d76;outline-offset:6px}
+[hidden]{display:none!important}
+.page-width{width:calc(100% - 112px);max-width:1440px;margin-inline:auto}
+.section-space{padding-block:124px}
+.eyebrow{font-size:13px;line-height:1.5;font-weight:550;letter-spacing:0;margin-bottom:25px}
+.muted{color:var(--muted)}
+.skip-link{position:fixed;top:10px;left:20px;z-index:150;background:var(--ink);color:white;padding:12px 20px;border-radius:6px;transform:translateY(-160%)}
+.skip-link:focus{transform:none}
+.site-header{height:92px;width:100%;padding-inline:56px;display:flex;align-items:center;gap:38px;position:sticky;top:0;z-index:30;background:var(--paper);transition:box-shadow .3s,background .3s;border-bottom:1px solid transparent}
+.site-header.is-scrolled{background:rgb(250 250 248 / .93);backdrop-filter:blur(18px);border-bottom-color:var(--line)}
+.brand{display:inline-flex;align-items:center;gap:9px;font-size:24px;font-weight:750;letter-spacing:-1.3px;line-height:1}
+.brand img{width:44px;height:44px;flex-shrink:0}
+.desktop-nav{margin-left:auto;display:flex;gap:34px;font-size:13px;font-weight:550}
+.desktop-nav a{position:relative;padding-block:16px}
+.desktop-nav a::after{content:'';position:absolute;bottom:10px;left:0;right:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.desktop-nav a:hover::after,.desktop-nav a[aria-current]::after{transform:scaleX(1)}
+.header-contact,.primary-button,.pill-link{display:inline-flex;align-items:center;justify-content:space-between;gap:34px;min-height:48px;border-radius:100px;padding:13px 24px;font-size:13px;font-weight:600;line-height:1.5;transition:transform .25s var(--ease),background .25s,color .25s}
+.header-contact,.primary-button{background:var(--ink);color:#fff}
+.header-contact span,.primary-button span,.pill-link span{font-size:19px;line-height:1;transition:transform .3s var(--ease)}
+.header-contact:hover,.primary-button:hover{background:#3e443b}
+.header-contact:hover span,.primary-button:hover span,.pill-link:hover span{transform:translate(2px,-2px)}
+button:active,.primary-button:active,.pill-link:active{transform:scale(.98)}
+.primary-button{font-size:14px;padding:17px 27px;min-height:56px}
+.pill-link{border:1px solid #bcbfb4;background:transparent}
+.pill-link:hover{background:var(--ink);color:white;border-color:var(--ink)}
+.text-link{display:inline-flex;align-items:center;gap:26px;min-height:44px;font-size:14px;line-height:1.5;font-weight:600;padding:10px 0;background:none;position:relative;text-align:left}
+.text-link::after{content:'';position:absolute;left:0;bottom:5px;width:calc(100% - 42px);height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.text-link:hover::after{transform:scaleX(1)}
+.text-link span{font-size:22px;font-weight:400}
+.menu-toggle{display:none}
+.mobile-menu{position:fixed;inset:76px 0 0;z-index:29;background:var(--paper);padding:30px 24px;overflow:auto}
+.mobile-menu>a,.mobile-menu>button{display:flex;width:100%;justify-content:space-between;font-size:28px;text-align:left;letter-spacing:-.03em;border-bottom:1px solid var(--line);padding:20px 0;background:none}
+.mobile-menu .mobile-email{font-size:16px;margin-top:30px;border:0;letter-spacing:0}
+.hero-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:36px;align-items:end;padding-block:46px 48px}
+.hero-title-group .eyebrow{margin-bottom:23px}
+.hero-description{padding-bottom:3px;width:310px}
+.hero-description p{font-size:15px;line-height:1.75;color:#53564f;margin-bottom:22px}
+.hero-description .text-link{font-size:13px}
+.hero-media{margin:0 20px;aspect-ratio:2.4;min-height:390px;max-height:680px;position:relative;background:#080908;overflow:hidden;border-radius:8px}
+.hero-media>img{width:100%;height:100%;object-fit:cover;object-position:50% 48%}
+.hero-media::after{content:'';position:absolute;inset:50% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.65));pointer-events:none}
+.hero-caption{position:absolute;bottom:33px;left:36px;right:36px;color:white;display:flex;align-items:flex-end;justify-content:space-between;z-index:1}
+.hero-caption>div{display:flex;flex-direction:column;gap:4px}
+.hero-caption strong{font-size:30px;line-height:1.4;font-weight:500;letter-spacing:-.04em}
+.hero-caption span{font-size:12px}
+.hero-caption .media-label{font-size:10px;margin-bottom:8px;opacity:.75}
+.circle-button{display:grid;place-items:center;width:60px;height:60px;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.09);color:white;border-radius:50%;backdrop-filter:blur(12px);transition:background .25s,transform .25s var(--ease)}
+.circle-button:hover{background:rgba(255,255,255,.24);transform:scale(1.06)}
+.circle-button svg{width:24px;height:24px;margin-left:-3px}
+.hero-media-note{position:absolute;top:28px;left:36px;color:white;font-size:11px}
+.hero-bottom{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted);padding-top:22px}
+.hero-bottom a{display:flex;gap:26px;align-items:center}
+.hero-bottom a span{font-size:20px;color:var(--ink)}
+.studio{display:grid;grid-template-columns:1fr 1fr;gap:12%;padding-top:145px;padding-bottom:130px}
+.studio h2{font-size:clamp(36px,3.65vw,57px);line-height:1.13}
+.studio-detail{padding-top:44px}
+.studio-detail>p{max-width:475px;color:var(--muted);font-size:15px;line-height:1.8}
+.studio-detail .lead{font-size:23px;line-height:1.5;letter-spacing:-.025em;margin-bottom:23px;color:var(--ink)}
+.studio-facts{display:grid;grid-template-columns:1fr 1fr;gap:24px;border-top:1px solid var(--line);margin-top:37px;padding-top:28px}
+.studio-facts strong{display:block;font-size:55px;font-weight:450;line-height:1.1;letter-spacing:-.055em}
+.studio-facts span{display:block;font-size:12px;color:var(--muted);margin-top:12px}
+.selected{padding-top:0}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:38px;margin-bottom:50px}
+.section-heading .eyebrow{margin-bottom:21px}
+.section-heading .pill-link{margin-bottom:4px;flex-shrink:0}
+.section-aside{font-size:14px;line-height:1.7;color:var(--muted);margin-bottom:6px}
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:62px 30px}
+.project-card{min-width:0}
+.project-card-button{display:block;width:100%;background:none;padding:0;text-align:left;transition:transform .3s var(--ease)}
+.project-image{position:relative;aspect-ratio:1.51;border-radius:5px;background:#e4e4dc;overflow:hidden}
+.project-image img{height:100%;width:100%;object-fit:cover;transition:transform .75s var(--ease)}
+.project-open{display:grid;place-items:center;position:absolute;bottom:22px;right:22px;width:48px;height:48px;border-radius:50%;background:white;color:var(--ink);font-size:24px;opacity:0;transform:translateY(8px);transition:opacity .25s,transform .4s var(--ease)}
+.project-card-button:hover .project-image img{transform:scale(1.035)}
+.project-card-button:hover .project-open,.project-card-button:focus-visible .project-open{opacity:1;transform:none}
+.project-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:21px}
+.project-meta h3{font-size:24px}
+.project-meta>span{font-size:24px}
+.project-description{font-size:13px;color:var(--muted);margin-top:7px}
+.project-category{font-size:11px;line-height:1.5;margin-top:16px;color:#555950}
+.solutions{background:var(--panel)}
+.solutions .section-heading{margin-bottom:70px}
+.audience-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+.audience{padding:0 32px;display:flex;flex-direction:column;border-left:1px solid #d0d3c9}
+.audience:first-child{border:0;padding-left:0}
+.audience:last-child{padding-right:0}
+.audience-icon{height:78px;display:flex;align-items:flex-start;margin-bottom:26px}
+.audience-icon svg{height:58px;width:58px;fill:none;stroke:currentColor;stroke-width:1.15;stroke-linejoin:round}
+.audience .eyebrow{font-size:11px;margin-bottom:18px}
+.audience h3{font-size:26px;line-height:1.25;margin-bottom:22px}
+.audience>p:not(.eyebrow){color:#5c6056;font-size:14px;line-height:1.85;margin-bottom:31px}
+.audience .text-link{margin-top:auto;font-size:12px;gap:16px;align-self:flex-start}
+.panorama-scene{background:#080908;color:#f5f6f1;padding-top:108px;padding-bottom:80px;overflow:hidden}
+.panorama-top{text-align:center}
+.panorama-top .eyebrow{color:#bdc3b6;margin-bottom:27px}
+.panorama-top h2{font-size:clamp(39px,4.8vw,72px);line-height:1.09;letter-spacing:-.055em}
+.panorama-top>p:last-child{font-size:14px;line-height:1.8;color:#b7bcb2;margin-top:29px}
+.panorama-frame{position:relative;margin:45px 20px 0;aspect-ratio:2.4;max-height:700px;overflow:hidden;border-radius:5px}
+.panorama-frame>img{height:100%;width:100%;object-fit:cover;object-position:50% 52%;transform:scale(calc(1 + var(--scene-progress)*.055));will-change:transform}
+.scene-play{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:13px;color:white;font-size:12px;padding:8px 20px 8px 8px;border:1px solid #777d77;background:rgba(0,0,0,.6);border-radius:60px;backdrop-filter:blur(12px);white-space:nowrap}
+.scene-play:active{transform:translateX(-50%) scale(.98)}
+.play-disc{display:grid;place-items:center;width:35px;height:35px;border-radius:50%;background:#fff;color:#151715;font-size:11px}
+.panorama-details{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:40px;padding-top:51px;align-items:center}
+.panorama-fact strong{display:block;font-weight:400;font-size:72px;line-height:1.1;letter-spacing:-.06em}
+.panorama-fact>span{display:block;font-size:12px;color:#b7bcb2;margin-top:12px}
+.panorama-description{padding-left:26px;border-left:1px solid #41453e}
+.panorama-description>p{font-size:13px;color:#b7bcb2;line-height:1.75;margin-bottom:13px}
+.panorama-description .text-link{font-size:12px}
+.process .section-heading{margin-bottom:65px}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);list-style:none;padding:0;margin:0;gap:28px}
+.process-grid li{border-top:1px solid #bcbfb4;padding-top:23px}
+.step-number{font-size:12px;color:var(--muted)}
+.process-grid h3{font-size:18px;margin-top:44px;margin-bottom:15px;line-height:1.4;letter-spacing:-.02em}
+.process-grid p{font-size:13px;color:var(--muted);line-height:1.85}
+.capabilities{display:flex;gap:12px;flex-wrap:wrap;margin-top:60px}
+.capabilities>span{font-size:11px;border:1px solid var(--line);padding:8px 15px;border-radius:30px}
+.contact-section{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;border-top:1px solid #bfc3b8;padding-block:95px 108px}
+.contact-section h2{font-size:clamp(43px,4.8vw,72px);line-height:1.08;margin-bottom:37px}
+.contact-side{align-self:end;padding-bottom:8px;justify-self:end;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.contact-side p{font-size:14px;line-height:1.85;color:var(--muted);margin-bottom:18px}
+.email-link{font-size:23px;letter-spacing:-.04em;display:inline-flex;gap:30px;align-items:center}
+.contact-side>a:last-child{font-size:15px}
+.site-footer{padding-top:30px;padding-bottom:30px;border-top:1px solid var(--line)}
+.footer-main{display:flex;align-items:center;gap:64px;padding-bottom:45px}
+.footer-main>p{font-size:12px;color:var(--muted)}
+.footer-brand{font-size:22px}
+.back-top{margin-left:auto;font-size:12px;display:flex;gap:35px;align-items:center}
+.back-top span{font-size:20px}
+.footer-bottom{display:flex;gap:35px;align-items:center;justify-content:space-between;font-size:10px;color:var(--muted)}
+.portfolio-header{padding-top:69px;padding-bottom:63px}
+.portfolio-intro{display:flex;justify-content:space-between;gap:34px;align-items:flex-end}
+.portfolio-intro h1{font-size:clamp(45px,5.6vw,85px)}
+.portfolio-intro>p{font-size:13px;line-height:1.85;margin-bottom:7px;color:var(--muted)}
+.portfolio-bar{display:flex;gap:20px;justify-content:space-between;align-items:center;padding-block:22px;border-top:1px solid var(--line);margin-bottom:28px}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filter-button{background:transparent;color:#595d53;border-radius:50px;min-height:44px;padding:10px 18px;font-size:12px;transition:background .25s,color .25s}
+.filter-button:hover{background:#eceee7}
+.filter-button[aria-pressed="true"]{background:var(--ink);color:white}
+.project-count{font-size:11px;color:var(--muted);white-space:nowrap}
+.portfolio-section{padding-bottom:110px}
+dialog{position:fixed;margin:auto;background:var(--paper);color:var(--ink);padding:0;border:0;border-radius:15px;max-height:calc(100dvh - 60px);width:min(960px,calc(100% - 48px));overflow:auto;overscroll-behavior:contain;box-shadow:0 25px 90px rgba(0,0,0,.2)}
+dialog::backdrop{background:rgba(17,21,17,.63);backdrop-filter:blur(8px)}
+dialog[open]{animation:dialog-enter .32s var(--ease)}
+.dialog-close{position:sticky;float:right;top:16px;right:16px;z-index:2;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-family:Arial,sans-serif;font-size:27px;line-height:1;background:#fafaf8;color:#1c201a;margin:16px 16px -58px 0;box-shadow:0 1px 8px #0002}
+.dialog-close:hover{background:#e2e5dc}
+.case-image{width:100%;max-width:min(100%,var(--case-image-width,960px));margin-inline:auto;max-height:500px;object-fit:cover}
+.case-body{padding:40px 48px 48px}
+.case-body .eyebrow{font-size:12px;margin-bottom:17px}
+.case-body h2{font-size:48px;margin-bottom:26px}
+.case-body>p:not(.eyebrow){font-size:15px;color:var(--muted);line-height:1.85;max-width:750px}
+.case-body>p.case-credits{font-size:11px;margin-top:18px}
+.case-features{display:flex;flex-wrap:wrap;gap:9px;margin-block:29px 33px}
+.case-features span{padding:7px 13px;border:1px solid var(--line);font-size:11px;border-radius:40px}
+.case-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.case-actions .text-link{font-size:12px}
+.video-dialog{background:#10120f;color:white;width:min(1150px,calc(100% - 48px))}
+.video-dialog video{width:100%;max-height:calc(100dvh - 230px);display:block;background:#000}
+.video-caption{padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.video-caption h2{font-size:28px}
+.video-caption p{font-size:12px;color:#b5bbad;margin-top:8px}
+.video-caption .text-link{font-size:12px}
+.video-error{padding:15px 30px;color:#f5cda6;font-size:13px}
+.contact-dialog{width:min(760px,calc(100% - 48px));padding:44px 48px}
+.contact-dialog .dialog-close{top:0;right:0;margin:-24px -28px -18px 0}
+.contact-dialog>.eyebrow{margin-bottom:24px}
+.contact-dialog h2{font-size:49px;max-width:580px;margin-bottom:22px}
+.dialog-intro{font-size:13px;color:var(--muted);line-height:1.8;max-width:590px}
+.contact-context{font-size:12px;background:var(--panel);padding:12px 16px;margin-top:18px;border-radius:6px}
+.contact-form{margin-top:27px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.field{display:flex;flex-direction:column;gap:10px;font-size:11px;font-weight:600;margin-bottom:23px}
+.field input,.field textarea{width:100%;border:0;border-bottom:1px solid #92998a;background:transparent;border-radius:0;padding:10px 0;color:var(--ink);font-size:14px;font-weight:400;line-height:1.6;resize:vertical}
+.field textarea{min-height:83px}
+.field input::placeholder,.field textarea::placeholder{color:#747b6d;opacity:1}
+.form-note{font-size:10px;color:var(--muted);line-height:1.7;margin:0 0 23px;max-width:520px}
+.contact-direct{border-top:1px solid var(--line);padding-top:24px;margin-top:30px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px}
+.draft-result{border:1px solid #bccbb3;background:#f2f6ed;padding:22px;border-radius:8px;margin-top:26px}
+.draft-result h3{font-size:20px;margin-bottom:10px}
+.draft-result>p{font-size:12px;line-height:1.75;color:#515d48}
+.draft-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.draft-actions .text-link{font-size:12px}
+.copy-button{font-size:12px;background:transparent;text-decoration:underline;padding:10px 0}
+.copy-fallback{width:100%;min-height:140px;margin-top:14px;font-size:12px;padding:10px;background:#fff;border:1px solid var(--line)}
+@keyframes hero-enter{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+@keyframes dialog-enter{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:no-preference){.hero-title-group{animation:hero-enter .8s var(--ease) both}.hero-description{animation:hero-enter .8s .12s var(--ease) both}}
+@media(min-width:1700px){.site-header{padding-inline:max(56px,calc((100% - 1440px)/2))}.hero-media{max-width:1720px;margin-inline:auto}.panorama-frame{max-width:1720px;margin-inline:auto}}
+@media(max-width:1150px){.page-width{width:calc(100% - 72px)}.site-header{padding-inline:36px;gap:28px}.hero-description{width:260px}.hero-description p{font-size:13px}.hero-intro{gap:22px}.hero-media{min-height:360px}.studio{gap:9%}.audience{padding-inline:24px}.audience h3{font-size:22px}.audience .eyebrow{font-size:10px}.audience>p:not(.eyebrow){font-size:13px}.process-grid{gap:22px}.process-grid h3{font-size:16px}.process-grid p{font-size:12px}.portfolio-intro>p{font-size:12px}.portfolio-intro h1{font-size:5.5vw}.project-count{display:none}}
+@media(max-width:960px) and (min-width:761px){.hero-intro{grid-template-columns:1fr;padding-top:38px}.hero-title-group h1{font-size:70px}.hero-description{width:auto;display:flex;gap:30px;justify-content:space-between;align-items:flex-end;margin-top:10px}.hero-description p{font-size:14px;margin:0}.hero-description .desktop-break{display:none}.hero-description .text-link{flex-shrink:0}.studio{gap:7%}.studio-detail .lead{font-size:20px}.studio h2{font-size:36px}.studio-facts strong{font-size:45px}.section-space{padding-block:90px}.selected{padding-top:0}.section-heading h2{font-size:38px}.audience-grid{grid-template-columns:1fr}.audience{display:grid;grid-template-columns:100px 1fr 1fr;gap:10px 25px;padding:30px 0;border:0;border-top:1px solid #d0d3c9}.audience:first-child{border-top:1px solid #d0d3c9}.audience-icon{grid-row:1/4;margin:0}.audience .eyebrow{grid-column:2/4;margin:0}.audience h3{grid-column:2;grid-row:2/4;margin:0}.audience>p:not(.eyebrow){grid-column:3;margin:0}.audience .text-link{grid-column:3}.process-grid{grid-template-columns:1fr 1fr;gap:40px}.portfolio-intro{align-items:flex-start;flex-direction:column}.portfolio-intro h1{font-size:66px}.portfolio-intro>p .desktop-break{display:none}.contact-section{gap:30px}.email-link{font-size:20px;gap:15px}.desktop-nav{gap:25px}.header-contact{padding-inline:19px;gap:20px;font-size:12px}}
+@media(max-width:760px){
+ html{scroll-padding-top:88px}
+ .page-width{width:calc(100% - 40px)}
+ .section-space{padding-block:72px}
+ .site-header{height:76px;padding-inline:18px;gap:16px}
+ .brand{font-size:22px;gap:5px}
+ .brand img{width:40px;height:40px}
+ .desktop-nav,.header-contact{display:none}
+ .menu-toggle{display:flex;width:44px;height:44px;background:transparent;flex-direction:column;justify-content:center;gap:6px;padding:10px;margin-left:auto}
+ .menu-toggle span{display:block;height:1px;width:24px;background:var(--ink);transition:transform .25s var(--ease)}
+ .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3.5px) rotate(45deg)}
+ .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+ .hero-intro{display:block;padding-block:39px 33px}
+ .hero-title-group .eyebrow{font-size:10px;margin-bottom:23px}
+ .hero h1{font-size:clamp(38px,8.65vw,63px);letter-spacing:-.055em;line-height:1.09}
+ .hero-description{width:auto;margin-top:24px;display:block}
+ .hero-description p{font-size:13px;line-height:1.75;max-width:350px;margin-bottom:13px}
+ .hero-description .text-link{font-size:12px;padding-block:8px}
+ .desktop-break{display:none}
+ .hero-media{margin-inline:10px;aspect-ratio:1.08;min-height:0;max-height:none;border-radius:5px}
+ .hero-media>img{object-position:62% 48%}
+ .hero-caption{left:20px;right:20px;bottom:20px}
+ .hero-caption strong{font-size:25px}
+ .hero-caption span{font-size:10px}
+ .hero-caption .media-label{font-size:9px;margin-bottom:2px}
+ .circle-button{width:46px;height:46px}
+ .hero-media-note{top:18px;left:20px;font-size:9px}
+ .hero-bottom{padding-top:17px;font-size:10px}
+ .hero-bottom>a{display:none}
+ .studio{display:block;padding-top:85px}
+ .studio .eyebrow{font-size:11px;margin-bottom:22px}
+ .studio h2{font-size:41px;line-height:1.12}
+ .studio-detail{padding-top:33px}
+ .studio-detail .lead{font-size:20px;line-height:1.55;margin-bottom:18px}
+ .studio-detail>p{font-size:13px;line-height:1.85}
+ .studio-facts{margin-top:30px;padding-top:23px;gap:15px}
+ .studio-facts strong{font-size:48px}
+ .studio-facts span{font-size:10px;margin-top:10px}
+ .selected{padding-top:0}
+ .section-heading{display:block;margin-bottom:29px}
+ .section-heading .eyebrow{font-size:10px;margin-bottom:18px}
+ .section-heading h2{font-size:36px;line-height:1.12}
+ .section-heading .pill-link{margin-top:23px;padding:11px 18px;min-height:42px;font-size:11px}
+ .section-aside{font-size:12px;margin-top:24px}
+ .project-grid{grid-template-columns:1fr;gap:34px}
+ .project-image{aspect-ratio:1.46}
+ .project-open{display:none}
+ .project-meta{margin-top:16px}
+ .project-meta h3{font-size:23px}
+ .project-description{font-size:12px;margin-top:5px}
+ .project-category{font-size:10px;margin-top:11px}
+ .solutions .section-heading{margin-bottom:40px}
+ .audience-grid{grid-template-columns:1fr;gap:38px}
+ .audience,.audience:first-child,.audience:last-child{padding:0;border:0}
+ .audience+.audience{border-top:1px solid #cdd1c5;padding-top:35px}
+ .audience-icon{height:52px;margin-bottom:20px}
+ .audience-icon svg{height:48px;width:48px}
+ .audience .eyebrow{font-size:10px;margin-bottom:14px}
+ .audience h3{font-size:28px;margin-bottom:18px}
+ .audience>p:not(.eyebrow){font-size:13px;margin-bottom:15px}
+ .audience .text-link{font-size:12px}
+ .panorama-scene{padding-block:70px 55px}
+ .panorama-top .eyebrow{font-size:10px;margin-bottom:22px}
+ .panorama-top h2{font-size:clamp(31px,7.8vw,46px)}
+ .panorama-top>p:last-child{font-size:12px;margin-top:24px}
+ .panorama-frame{margin:32px 10px 0;aspect-ratio:1.18}
+ .panorama-frame>img{object-position:50% 50%;transform:none}
+ .scene-play{font-size:10px;bottom:18px;padding-right:16px;gap:10px}
+ .play-disc{height:30px;width:30px;font-size:10px}
+ .panorama-details{grid-template-columns:1fr 1fr;gap:34px 25px;padding-top:35px}
+ .panorama-fact strong{font-size:54px}
+ .panorama-fact>span{font-size:10px;margin-top:9px}
+ .panorama-description{grid-column:1/-1;border-left:0;border-top:1px solid #3f463a;padding:27px 0 0}
+ .panorama-description>p{font-size:12px}
+ .process .section-heading{margin-bottom:37px}
+ .process-grid{grid-template-columns:1fr;gap:28px}
+ .process-grid li{display:grid;grid-template-columns:32px 1fr;gap:12px 22px;padding-top:23px}
+ .step-number{grid-row:1/3;font-size:11px;padding-top:2px}
+ .process-grid h3{margin:0;font-size:19px}
+ .process-grid p{font-size:12px;grid-column:2}
+ .capabilities{margin-top:38px;gap:7px}
+ .capabilities>span{font-size:9px;padding:6px 10px}
+ .contact-section{grid-template-columns:1fr;gap:43px;padding-block:65px}
+ .contact-intro>.eyebrow{font-size:10px;margin-bottom:23px}
+ .contact-section h2{font-size:43px;margin-bottom:28px}
+ .primary-button{min-height:52px;font-size:12px;padding:15px 22px}
+ .contact-side{justify-self:start;padding:0;gap:13px}
+ .contact-side p{font-size:12px;margin-bottom:8px}
+ .email-link{font-size:21px;gap:22px}
+ .contact-side>a:last-child{font-size:13px}
+ .site-footer{padding-block:24px}
+ .footer-main{gap:20px;flex-wrap:wrap;padding-bottom:25px}
+ .footer-main>.brand{font-size:22px}
+ .footer-main>p{order:3;width:100%;font-size:11px;padding-left:3px}
+ .back-top{font-size:10px;gap:15px}
+ .footer-bottom{flex-wrap:wrap;justify-content:flex-start;gap:12px;font-size:9px}
+ .footer-bottom>span:nth-child(2){order:3;width:100%}
+ .footer-bottom>a{margin-left:auto}
+ .portfolio-header{padding-top:40px;padding-bottom:34px}
+ .portfolio-header>.eyebrow{font-size:11px;margin-bottom:22px}
+ .portfolio-intro{display:block}
+ .portfolio-intro h1{font-size:clamp(34px,8.5vw,61px);line-height:1.12}
+ .portfolio-intro>p{font-size:12px;line-height:1.85;margin-top:24px;max-width:370px}
+ .portfolio-bar{padding-block:18px;margin-bottom:17px;display:block}
+ .filters{gap:3px}
+ .filter-button{font-size:10px;padding:8px 12px;min-height:44px}
+ .portfolio-section{padding-bottom:65px}
+ dialog{width:calc(100% - 20px);max-height:calc(100dvh - 20px);border-radius:10px}
+ .dialog-close{width:44px;height:44px;top:12px;right:12px;margin:12px 12px -56px 0}
+ .case-image{min-height:210px;object-fit:cover}
+ .case-body{padding:27px 23px 31px}
+ .case-body h2{font-size:34px;margin-bottom:22px}
+ .case-body .eyebrow{font-size:10px}
+ .case-body>p:not(.eyebrow){font-size:13px;line-height:1.8}
+ .case-body>p.case-credits{font-size:10px}
+ .case-features{gap:7px;margin-block:25px}
+ .case-features>span{font-size:10px;padding:6px 10px}
+ .case-actions{gap:13px}
+ .case-actions .primary-button{width:100%}
+ .video-dialog{width:calc(100% - 20px)}
+ .video-dialog video{min-height:210px;max-height:60dvh}
+ .video-caption{padding:20px;display:block}
+ .video-caption h2{font-size:26px}
+ .video-caption p{font-size:11px}
+ .video-caption .text-link{font-size:11px;margin-top:13px}
+ .contact-dialog{width:calc(100% - 20px);padding:35px 24px 28px}
+ .contact-dialog .dialog-close{margin:-21px -11px -17px 0;top:0}
+ .contact-dialog>.eyebrow{font-size:11px;padding-right:25px;margin-bottom:22px}
+ .contact-dialog h2{font-size:36px;padding-right:10px;line-height:1.1}
+ .dialog-intro{font-size:12px;line-height:1.8}
+ .contact-context{font-size:11px}
+ .field-row{grid-template-columns:1fr;gap:0}
+ .field{font-size:11px}
+ .field input,.field textarea{font-size:16px}
+ .form-note{font-size:10px}
+ .contact-form>.primary-button{width:100%}
+ .contact-direct{font-size:11px;gap:15px}
+ .draft-result{padding:17px}
+ .draft-actions{gap:7px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.panorama-frame>img{transform:none;will-change:auto}.project-card-button:hover .project-image img{transform:none}}
+@media(prefers-reduced-transparency:reduce){.site-header.is-scrolled{background:var(--paper);backdrop-filter:none}dialog::backdrop{backdrop-filter:none;background:#171d17e8}.circle-button{background:#222;backdrop-filter:none}.scene-play{background:#080908;backdrop-filter:none}}
+@media(prefers-contrast:more){:root{--muted:#44483d;--line:#727b65}.panorama-top .eyebrow,.panorama-top>p:last-child,.panorama-fact>span,.panorama-description>p{color:#fff}}
+
+
+:root{--paper:#f6f9fa;--ink:#14272b;--muted:#52676c;--line:#d6e3e6;--panel:#edf4f5;--cyan:#00ffff;--accent-deep:#006c75}
+.calc-header{height:88px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.calc-header nav{display:flex;gap:30px;align-items:center;font-size:14px}.contact-link{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:30px;background:var(--ink);color:white;font-size:14px;min-height:48px}.calc-page{max-width:1320px;width:calc(100% - 96px);margin:auto}.intro{padding:44px 0 30px}.kicker{font-size:14px;color:var(--muted);margin-bottom:14px}.intro h1{font-size:clamp(30px,3.7vw,52px);letter-spacing:-.035em}.intro-note{margin-top:14px;color:var(--muted)}.calculator{border:1px solid var(--line);border-radius:20px;background:#fff;overflow:hidden}.controls{display:flex;align-items:end;justify-content:space-between;padding:24px 30px;border-bottom:1px solid var(--line);gap:20px}fieldset{margin:0;padding:0;border:0;min-width:0}.formats legend,.rounding{font-size:14px}.format-options{display:flex;gap:6px;margin-top:10px}.format-options label{position:relative;cursor:pointer}.format-options input{position:absolute;opacity:0;width:100%;height:100%;margin:0}.format-options span{display:flex;justify-content:center;align-items:center;width:72px;min-height:44px;background:#edf4f5;border:1px solid transparent;border-radius:9px;font-weight:650}.format-options input:checked+span{background:var(--ink);color:#fff}.format-options input:focus-visible+span{outline:2px solid #006c75;outline-offset:3px}.rounding{display:flex;flex-direction:column;gap:10px}.rounding select{font:inherit;border:1px solid var(--line);background:white;border-radius:9px;min-height:44px;padding:0 12px;width:140px}.calc-workspace{display:grid;grid-template-columns:1.15fr 1fr;min-width:0}.dimensions{padding:30px}.dimension-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:24px}.dimension-heading h2{font-size:21px;letter-spacing:0}.dimension-heading>span{font-size:12px;color:var(--muted)}.dimension-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.dimension{padding:16px 12px;background:#edf4f5;border-radius:12px;position:relative}.dimension legend{float:left;width:100%;font-size:14px;font-weight:600;margin-bottom:16px}.dimension-icon{color:#007780;font-size:18px}.dimension label{display:flex;flex-direction:column;clear:both}.dimension input{font-size:clamp(24px,2.3vw,34px);font-weight:600;letter-spacing:-.045em;border:0;background:transparent;width:100%;min-width:0;padding:0;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.4;border-radius:4px}.dimension input:focus{outline:2px solid #006c75;outline-offset:4px;background:white}.dimension input[aria-invalid=true]{outline:2px solid #b33a35}.unit{font-size:12px;color:var(--muted)}.secondary-value{border-top:1px solid #d6e3e6;margin-top:16px;padding-top:12px}.secondary-value input{font-size:22px;color:#34545b}.input-status{font-size:13px;min-height:21px;color:var(--muted);margin-top:14px}.input-status.error{color:#a52a27}.presets{margin-top:26px;font-size:14px}.presets>span{display:block;margin-bottom:10px}.presets>div{display:flex;gap:7px;flex-wrap:wrap}.presets button{background:white;border:1px solid var(--line);border-radius:8px;min-height:44px;min-width:48px;padding:7px 12px;font-size:14px}.presets button[aria-pressed=true]{background:#ccfbfc;border-color:#00838c}.visual{background:#e8f7f8;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--line)}.visual-heading{display:flex;justify-content:space-between;font-size:14px;gap:12px}.visual-heading span:last-child{color:#46646b;font-size:12px}.visual svg{width:100%;height:auto;max-height:330px;margin:12px auto}#diagram-diagonal{font:650 40px Manrope,Arial;fill:#123d45}#diagram-diagonal-cm{font:14px Manrope,Arial;fill:#315e68}#diagram-width,#diagram-height{font:14px Manrope,Arial;fill:#345a63}.visual figcaption{font-size:12px;color:#4c6870;text-align:center}.size-reference{display:grid;grid-template-columns:1fr 1.35fr;gap:80px;padding:70px 0;border-bottom:1px solid var(--line)}.size-reference h2,.help h2{font-size:32px;letter-spacing:-.025em}.size-reference p:not(.kicker){color:var(--muted);font-size:14px;margin-top:16px;max-width:340px}.table-wrap{min-width:0}table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}th{text-align:left;color:var(--muted);font-weight:500;padding:0 10px 14px}td{padding:12px 10px;border-top:1px solid var(--line)}td button{font-weight:650;background:transparent;min-height:44px;padding:0 8px;border-radius:6px}tbody tr:has(button:hover),tbody tr.selected{background:#e1f9fa}.help{max-width:850px;padding:60px 0}.help h2{margin-bottom:26px}.help details{border-bottom:1px solid var(--line);padding:18px 0}.help summary{cursor:pointer;font-size:16px;min-height:30px}.help details p{color:var(--muted);margin-top:14px;font-size:16px}.project-note{padding:36px;background:#dcf5f7;display:flex;align-items:center;justify-content:space-between;gap:30px;border-radius:16px;margin-bottom:60px}.project-note h2{font-size:30px;max-width:620px;letter-spacing:-.02em}.project-note .contact-link{flex-shrink:0}.calc-footer{border-top:1px solid var(--line);padding:30px 4vw;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:14px;color:var(--muted)}.calc-footer .brand{color:var(--ink)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.no-js{padding:20px;background:#fff2d2}
+@media(max-width:1050px){.calc-page{width:calc(100% - 48px)}.calc-workspace{grid-template-columns:1fr}.visual{border-left:0;border-top:1px solid var(--line);padding:20px}.visual svg{max-height:250px}.dimension input{font-size:34px}.size-reference{gap:35px}.calc-header nav>a:not(.contact-link){display:none}}
+@media(max-width:600px){.calc-header{height:64px;padding:0 18px}.calc-header .brand{font-size:21px}.calc-header .brand img{width:30px;height:30px}.calc-header .contact-link{background:transparent;color:var(--ink);padding:6px 0;font-size:12px;min-height:44px}.calc-page{width:calc(100% - 32px)}.intro{padding:22px 0 20px}.intro .kicker{font-size:12px;margin-bottom:10px}.intro h1{font-size:28px;line-height:1.15;max-width:350px;letter-spacing:-.025em;text-align:left}.intro-note{font-size:14px;margin-top:10px}.calculator{border-radius:14px}.controls{padding:16px 14px;gap:10px}.formats legend,.rounding{font-size:12px}.format-options{gap:4px;margin-top:8px}.format-options span{width:43px;min-height:44px;font-size:14px;border-radius:7px}.rounding{gap:8px}.rounding select{width:92px;padding:0 6px;font-size:12px}.dimensions{padding:18px 12px}.dimension-heading{margin-bottom:14px}.dimension-heading h2{font-size:17px}.dimension-heading>span{font-size:12px}.dimension-grid{gap:6px}.dimension{padding:12px 8px;border-radius:9px}.dimension legend{font-size:12px;margin-bottom:12px;white-space:nowrap}.dimension-icon{font-size:14px}.dimension input{font-size:26px;min-height:44px;letter-spacing:-.05em}.secondary-value{margin-top:10px;padding-top:6px}.secondary-value input{font-size:22px}.input-status{font-size:12px;margin-top:10px}.presets{margin-top:16px;font-size:12px}.presets>div{gap:5px;flex-wrap:nowrap}.presets button{flex:1;min-width:0;padding:6px 0;font-size:13px}.visual{padding:14px 10px}.visual-heading{font-size:12px}.visual-heading span:last-child{font-size:12px}.visual svg{max-height:205px;margin:4px auto}.visual figcaption{font-size:12px}.size-reference{display:block;padding:40px 0}.size-reference h2,.help h2{font-size:26px}.size-reference p:not(.kicker){margin-top:12px}.table-wrap{margin-top:25px}th,td{padding:10px 5px;font-size:13px}.help{padding:40px 0}.help summary{font-size:14px}.project-note{padding:24px;display:block;margin-bottom:35px}.project-note h2{font-size:26px}.project-note .contact-link{margin-top:22px}.calc-footer{flex-wrap:wrap;padding:25px 18px}.calc-footer .brand{flex-basis:100%}.calc-footer>span{font-size:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.calculator-projects{padding:56px 0 0}
+.projects-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}
+.projects-heading .kicker{margin-bottom:10px}
+.projects-heading h2{font-size:36px;letter-spacing:-.025em}
+.projects-heading>a{font-size:14px;text-decoration:underline;text-underline-offset:5px;padding-block:8px}
+.project-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;list-style:none;padding:0;margin:0;border-radius:16px;scrollbar-width:thin;background:#14272b;overscroll-behavior-x:contain}
+.project-slide{flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always}
+.project-slide>a{display:block;position:relative;color:white;isolation:isolate}
+.project-slide img{width:100%;height:clamp(320px,36vw,500px);object-fit:cover}
+.project-slide>a::after{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.85));z-index:0;pointer-events:none}
+.project-slide-caption{position:absolute;left:36px;right:36px;bottom:32px;z-index:1;display:grid;grid-template-columns:1fr auto;gap:10px 20px;align-items:end}
+.project-slide-caption p{grid-column:1/-1;font-size:14px;color:#fff}
+.project-slide-caption h3{font-size:36px;line-height:1.15;letter-spacing:-.02em}
+.project-slide-caption>span{font-size:14px;text-decoration:underline;text-underline-offset:5px}
+.project-slide a:focus-visible{outline:3px solid var(--cyan);outline-offset:-6px}
+.project-slide a:hover .project-slide-caption>span{text-decoration-thickness:2px}
+.projects-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:16px}
+#project-position{font-size:14px;font-variant-numeric:tabular-nums;min-width:0}
+.projects-controls>div{display:flex;gap:8px;flex-shrink:0}
+.projects-controls button{min-height:44px;padding:10px 20px;border:1px solid var(--line);border-radius:30px;background:white;font-size:14px}
+.projects-controls button:hover{background:var(--ink);color:white}
+.projects-controls button:active{transform:scale(.96)}
+.projects-tab-note{font-size:13px;color:var(--muted);margin-top:12px}
+@media(max-width:600px){.calculator-projects{padding-top:36px}.projects-heading{margin-bottom:18px;gap:12px}.projects-heading h2{font-size:28px}.projects-heading .kicker{font-size:12px}.projects-heading>a{font-size:13px;white-space:nowrap}.project-track{border-radius:12px}.project-slide img{height:240px}.project-slide-caption{left:20px;right:20px;bottom:24px;grid-template-columns:1fr;gap:10px}.project-slide-caption h3{font-size:29px}.project-slide-caption>span{margin-top:4px}.projects-controls button{padding:10px 14px}#project-position{font-size:12px}.projects-tab-note{font-size:12px}}
+.intro h1{max-width:1050px;font-size:clamp(28px,3.25vw,44px);line-height:1.14}
+.screen-guide{max-width:850px;margin:0 auto;padding:32px 0 64px}
+.guide-nav{display:flex;flex-wrap:wrap;gap:8px 24px;padding:0 0 24px;border-bottom:1px solid var(--line);font-size:14px}
+.guide-nav a{padding-block:8px;text-decoration:underline;text-underline-offset:5px}
+.guide-intro{padding-top:28px;color:var(--muted)}
+.screen-guide section{padding-top:40px;scroll-margin-top:24px}
+.screen-guide h2{font-size:30px;line-height:1.25;letter-spacing:-.02em;margin-bottom:20px}
+.screen-guide h3{font-size:20px;letter-spacing:0;margin:24px 0 14px}
+.screen-guide p,.screen-guide li{font-size:16px;line-height:1.75}
+.screen-guide p+p{margin-top:16px}
+.screen-guide ol,.screen-guide ul{padding-left:24px;margin-block:16px}
+.screen-guide li+li{margin-top:7px}
+.guide-table{margin:20px 0;max-width:100%}
+.guide-table th{padding-top:12px;background:var(--panel)}
+.guide-table td,.guide-table th{vertical-align:top}
+.guide-table p{font-size:14px;line-height:1.6}
+.original-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+.original-size-table{min-width:540px}
+.screen-guide .table-note{font-size:14px;color:var(--muted)}
+.screen-guide details{padding:18px 0;border-bottom:1px solid var(--line)}
+.screen-guide summary{cursor:pointer;font-size:16px;min-height:30px;font-weight:600}
+.screen-guide details p{padding-top:14px;color:var(--muted)}
+.contact-link:hover{background:#22444c;color:white}
+.calc-header nav>a:not(.contact-link):hover,.calc-footer a:hover,.guide-nav a:hover{color:#006c75}
+.presets button:hover,td button:hover{background:#ccfbfc}
+.format-options label:hover span{border-color:#00838c}
+.rounding select{color:var(--ink)}
+@media(max-width:600px){.intro h1{font-size:22px;line-height:1.2}.screen-guide{padding:24px 0 40px}.screen-guide h2{font-size:25px}.screen-guide section{padding-top:32px}.guide-nav{gap:4px 18px}.guide-table td,.guide-table th{padding:10px 8px}.screen-guide summary{font-size:15px}}
+@media(max-width:340px){.calc-header{padding-inline:12px}.calc-header .brand{font-size:19px;gap:5px}.intro{padding:16px 0}.intro h1{font-size:20px}.intro-note{margin-top:8px}.controls{padding:12px 10px}.format-options span{width:37px}.rounding select{width:78px}.dimensions{padding:14px 10px}.dimension-heading{margin-bottom:10px}.dimension legend{margin-bottom:8px}.dimension-icon{display:none}.dimension{padding:10px 6px}.dimension input{font-size:24px}.secondary-value input{font-size:20px}.secondary-value{margin-top:6px;padding-top:4px}}
+
+.screen-guide>.guide-disclosure{padding:0;border-bottom:1px solid var(--line);color:var(--ink);scroll-margin-top:24px}
+.screen-guide>.guide-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:20px;list-style:none;min-height:72px;padding:22px 0;cursor:pointer}
+.screen-guide>.guide-disclosure>summary::-webkit-details-marker{display:none}
+.screen-guide>.guide-disclosure>summary::after{content:'+';font-size:26px;font-weight:400;flex-shrink:0;color:var(--muted)}
+.screen-guide>.guide-disclosure[open]>summary::after{content:'−'}
+.screen-guide>.guide-disclosure>summary:hover{color:#006c75}
+.screen-guide>.guide-disclosure>summary h2{font-size:22px;line-height:1.3;margin:0;letter-spacing:-.015em;text-align:left}
+.screen-guide .guide-body{padding:0 0 26px}
+.screen-guide .guide-body>p:first-child{padding-top:0}
+.screen-guide>.guide-disclosure.guide-intro{margin-top:12px}
+@media(max-width:600px){.screen-guide>.guide-disclosure>summary{min-height:68px;padding-block:20px;gap:14px}.screen-guide>.guide-disclosure>summary h2{font-size:18px}.screen-guide>.guide-disclosure>summary::after{font-size:24px}}@media(max-width:600px){.project-slide-caption h3{font-size:22px;line-height:1.2}.project-slide-caption{gap:8px;bottom:20px}.project-slide-caption p{font-size:12px}}
+
+/* Cyan from the InterFantasy logo is the primary action and selection color. */
+.contact-link{background:var(--cyan);color:var(--ink)}
+.contact-link:hover{background:#a8f7fa;color:var(--ink)}
+.format-options input:checked+span{background:var(--cyan);color:var(--ink);border-color:#00838c}
+.presets button[aria-pressed=true]{background:#ccfbfc;border-color:#00838c;color:#123d45}
+.projects-controls button:hover{background:var(--cyan);color:var(--ink);border-color:#00838c}
+:focus-visible{outline-color:var(--accent-deep)}
+::selection{background:#a8f7fa;color:#123d45}
+#diagonal-line{stroke:#007780}
+#width-line,#height-line{stroke:#597b83}
+#screen-rect{stroke:#123d45}
+@media(max-width:600px){.calc-header .contact-link{color:var(--accent-deep)}.calc-header .contact-link:hover{background:#ccfbfc;color:var(--ink)}}</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к калькулятору</a>
+  <header class="calc-header"><a class="brand" href="https://tramlex.github.io/interfantasy-preview/"><img src="https://tramlex.github.io/interfantasy-preview/media/favicon.svg" alt="" width="36" height="36"><span>interfantasy</span></a><nav aria-label="Навигация"><a href="https://interfantasy.ru/proektyi.html">Проекты</a><a href="https://interfantasy.ru/uslugi.html">Технологии</a><a class="contact-link" href="mailto:hello@interfantasy.ru">Обсудить проект</a></nav></header>
+  <main id="main" class="calc-page">
+    <div class="intro"><p class="kicker">Инструменты / Размеры экрана</p><h1>Калькулятор диагонали экрана: перевод дюймов в см и таблица размеров</h1><p class="intro-note">Введите любой размер — остальные рассчитаем.</p></div>
+    <section class="calculator" aria-label="Калькулятор размеров экрана">
+      <div class="controls"><fieldset class="formats"><legend>Формат экрана</legend><div class="format-options"><label><input type="radio" name="ratio" value="16:9" checked><span>16:9</span></label><label><input type="radio" name="ratio" value="4:3"><span>4:3</span></label><label><input type="radio" name="ratio" value="21:9"><span>21:9</span></label><label><input type="radio" name="ratio" value="1:1"><span>1:1</span></label></div></fieldset><label class="rounding">Округление<select id="precision"><option value="0">До целого</option><option value="1" selected>1 знак</option><option value="2">2 знака</option></select></label></div>
+      <div class="calc-workspace">
+        <div class="dimensions"><div class="dimension-heading"><h2>Размеры экрана</h2><span>1″ = 2,54 см</span></div><div class="dimension-grid">
+          <fieldset class="dimension" data-dimension="diagonal"><legend><span class="dimension-icon" aria-hidden="true">⤢</span> Диагональ</legend><label><span class="sr-only">Диагональ в дюймах</span><input name="diagonal-in" aria-describedby="input-status" spellcheck="false" id="diagonal-in" inputmode="decimal" type="text" value="55" autocomplete="off"><span class="unit">дюймы</span></label><label class="secondary-value"><span class="sr-only">Диагональ в сантиметрах</span><input name="diagonal-cm" aria-describedby="input-status" spellcheck="false" id="diagonal-cm" inputmode="decimal" type="text" value="139,7" autocomplete="off"><span class="unit">см</span></label></fieldset>
+          <fieldset class="dimension" data-dimension="width"><legend><span class="dimension-icon" aria-hidden="true">↔</span> Ширина</legend><label><span class="sr-only">Ширина в дюймах</span><input name="width-in" aria-describedby="input-status" spellcheck="false" id="width-in" inputmode="decimal" type="text" autocomplete="off" value="47,9"><span class="unit">дюймы</span></label><label class="secondary-value"><span class="sr-only">Ширина в сантиметрах</span><input name="width-cm" aria-describedby="input-status" spellcheck="false" id="width-cm" inputmode="decimal" type="text" autocomplete="off" value="121,8"><span class="unit">см</span></label></fieldset>
+          <fieldset class="dimension" data-dimension="height"><legend><span class="dimension-icon" aria-hidden="true">↕</span> Высота</legend><label><span class="sr-only">Высота в дюймах</span><input name="height-in" aria-describedby="input-status" spellcheck="false" id="height-in" inputmode="decimal" type="text" autocomplete="off" value="27"><span class="unit">дюймы</span></label><label class="secondary-value"><span class="sr-only">Высота в сантиметрах</span><input name="height-cm" aria-describedby="input-status" spellcheck="false" id="height-cm" inputmode="decimal" type="text" autocomplete="off" value="68,5"><span class="unit">см</span></label></fieldset>
+        </div><p id="input-status" class="input-status" role="status">Можно изменить любое из шести значений.</p><div class="presets"><span>Популярные диагонали</span><div><button type="button" data-size="32">32″</button><button type="button" data-size="43">43″</button><button type="button" data-size="55" aria-pressed="true">55″</button><button type="button" data-size="65">65″</button><button type="button" data-size="75">75″</button><button type="button" data-size="85">85″</button></div></div></div>
+        <figure class="visual"><div class="visual-heading"><span>Ваш экран</span><span id="format-caption">16:9 · Широкоформатный</span></div><svg id="screen-diagram" viewBox="0 0 480 310" role="img" aria-labelledby="diagram-title"><title id="diagram-title">Размеры экрана</title><defs><linearGradient id="screen-fill" x2="1" y2="1"><stop stop-color="#91edf0"/><stop offset="1" stop-color="#d9f8fc"/></linearGradient></defs><rect id="screen-rect" x="80" y="54" width="320" height="180" rx="7" fill="url(#screen-fill)" stroke="#20221f" stroke-width="2"/><path id="diagonal-line" d="M80 234L400 54" stroke="#266250" stroke-width="1.5" stroke-dasharray="5 5"/><text id="diagram-diagonal" x="240" y="137" text-anchor="middle">55″</text><text id="diagram-diagonal-cm" x="240" y="161" text-anchor="middle">139,7 см</text><path id="width-line" d="M80 250v12H400v-12" fill="none" stroke="#6a756e"/><text id="diagram-width" x="240" y="287" text-anchor="middle">121,8 см</text><path id="height-line" d="M414 54h12V234h-12" fill="none" stroke="#6a756e"/><text id="diagram-height" x="450" y="144" text-anchor="middle" transform="rotate(-90 450 144)">68,5 см</text></svg><figcaption>Размеры видимой области, без рамки и подставки.</figcaption></figure>
+      </div>
+    </section>
+<section class="calculator-projects" id="our-projects" aria-labelledby="projects-title" aria-roledescription="карусель"><div class="projects-heading"><div><p class="kicker">В реальном пространстве</p><h2 id="projects-title">Наши проекты</h2></div><a href="https://interfantasy.ru/proektyi.html" target="_blank" rel="noopener">Все проекты<span class="sr-only"> (в новой вкладке)</span></a></div><ul class="project-track" id="project-track" tabindex="0" aria-label="Проекты InterFantasy — листайте свайпом или стрелками клавиатуры"><li class="project-slide" aria-label="1 из 13"><a href="https://interfantasy.ru/expohologram/" target="_blank" rel="noopener" aria-label="Голографическая витрина ExpoHologram — описание проекта (в новой вкладке)"><img src="https://tramlex.github.io/interfantasy-preview/media/v2/hologram-1280.webp" srcset="https://tramlex.github.io/interfantasy-preview/media/v2/hologram-800.webp 800w, https://tramlex.github.io/interfantasy-preview/media/v2/hologram-1280.webp 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1280" height="800" alt="Цифровая графика и светящийся синий макет внутри витрины ExpoHologram" loading="lazy"><div class="project-slide-caption"><p>Голографическая витрина</p><h3>Голографическая витрина ExpoHologram</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="2 из 13"><a href="https://interfantasy.ru/immersivnaya-panoramnaya-videoproekcziya-v-restorane-krasota.html" target="_blank" rel="noopener" aria-label="Панорамная видеопроекция в ресторане Krasota — описание проекта (в новой вкладке)"><img src="https://tramlex.github.io/interfantasy-preview/media/v2/krasota-850.webp" srcset="https://tramlex.github.io/interfantasy-preview/media/v2/krasota-800.webp 800w, https://tramlex.github.io/interfantasy-preview/media/v2/krasota-850.webp 850w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="850" height="478" alt="Круглый стол и панорамная проекция в ресторане Krasota" loading="lazy"><div class="project-slide-caption"><p>Иммерсивный гастротеатр</p><h3>Панорамная видеопроекция в ресторане Krasota</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="3 из 13"><a href="https://interfantasy.ru/expopanorama/" target="_blank" rel="noopener" aria-label="Панорамная проекция ExpoPanorama — описание проекта (в новой вкладке)"><img src="https://tramlex.github.io/interfantasy-preview/media/v2/expopanorama-2300.webp" srcset="https://tramlex.github.io/interfantasy-preview/media/v2/expopanorama-800.webp 800w, https://tramlex.github.io/interfantasy-preview/media/v2/expopanorama-960.webp 960w, https://tramlex.github.io/interfantasy-preview/media/v2/expopanorama-1600.webp 1600w, https://tramlex.github.io/interfantasy-preview/media/v2/expopanorama-2300.webp 2300w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="2300" height="1533" alt="Посетитель в окружении синей панорамной проекции ExpoPanorama" loading="lazy"><div class="project-slide-caption"><p>Иммерсивное пространство</p><h3>Панорамная проекция ExpoPanorama</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="4 из 13"><a href="https://interfantasy.ru/immersive-sales-office" target="_blank" rel="noopener" aria-label="Иммерсивный офис продаж — описание проекта (в новой вкладке)"><img src="https://tramlex.github.io/interfantasy-preview/media/v2/sales-office-forest-1280.webp" srcset="https://tramlex.github.io/interfantasy-preview/media/v2/sales-office-forest-800.webp 800w, https://tramlex.github.io/interfantasy-preview/media/v2/sales-office-forest-1280.webp 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1280" height="720" alt="Посетительница касается интерактивной проекции с изображением леса в иммерсивном офисе продаж" loading="lazy"><div class="project-slide-caption"><p>Иммерсивный офис продаж</p><h3>Иммерсивный офис продаж</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="5 из 13"><a href="https://interfantasy.ru/eksklyuzivnyie-vyistavochnyie-stendyi.html" target="_blank" rel="noopener" aria-label="Эксклюзивные выставочные стенды — описание проекта (в новой вкладке)"><img src="https://interfantasy.ru/content/posters/exclusivevyst.png" srcset="https://tramlex.github.io/interfantasy-preview/media/calculator-projects/exclusivevyst-480.webp 480w, https://tramlex.github.io/interfantasy-preview/media/calculator-projects/exclusivevyst-800.webp 800w, https://interfantasy.ru/content/posters/exclusivevyst.png 1200w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1200" height="748" alt="Цифровая графика национального парка «Алханай» на экранах выставочного павильона" loading="lazy"><div class="project-slide-caption"><p>Мультимедиа на выставке</p><h3>Эксклюзивные выставочные стенды</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="6 из 13"><a href="https://interfantasy.ru/3d-led-ekran-severstal-na-metall-ekspo-2021.html" target="_blank" rel="noopener" aria-label="3D LED-экран «Северсталь» на «Металл-Экспо» — описание проекта (в новой вкладке)"><img src="https://tramlex.github.io/interfantasy-preview/media/v2/severstal-1200.webp" srcset="https://tramlex.github.io/interfantasy-preview/media/v2/severstal-800.webp 800w, https://tramlex.github.io/interfantasy-preview/media/v2/severstal-1200.webp 1200w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1200" height="747" alt="Светодиодные экраны на выставочном стенде Северстали" loading="lazy"><div class="project-slide-caption"><p>Контент и выставки</p><h3>3D LED-экран «Северсталь» на «Металл-Экспо»</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="7 из 13"><a href="https://interfantasy.ru/interaktivnyij-kontent-ugmk-innoprom.html" target="_blank" rel="noopener" aria-label="Интерактивный контент УГМК на «Иннопроме» — описание проекта (в новой вкладке)"><img src="https://tramlex.github.io/interfantasy-preview/media/v2/ugmk-1200.webp" srcset="https://tramlex.github.io/interfantasy-preview/media/v2/ugmk-800.webp 800w, https://tramlex.github.io/interfantasy-preview/media/v2/ugmk-1200.webp 1200w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1200" height="747" alt="Вертикальный светодиодный экран с интерактивным 3D контентом на стенде УГМК" loading="lazy"><div class="project-slide-caption"><p>Интерактивная презентация</p><h3>Интерактивный контент УГМК на «Иннопроме»</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="8 из 13"><a href="https://interfantasy.ru/zastrojka-vyistavochnyix-stendov.html" target="_blank" rel="noopener" aria-label="Застройка выставочных стендов — описание проекта (в новой вкладке)"><img src="https://interfantasy.ru/content/posters/zastroyka.png" srcset="https://tramlex.github.io/interfantasy-preview/media/calculator-projects/zastroyka-480.webp 480w, https://tramlex.github.io/interfantasy-preview/media/calculator-projects/zastroyka-800.webp 800w, https://interfantasy.ru/content/posters/zastroyka.png 1200w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1200" height="748" alt="Мультимедийная презентация на выставочном стенде — проект InterFantasy" loading="lazy"><div class="project-slide-caption"><p>Выставочные проекты</p><h3>Застройка выставочных стендов</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="9 из 13"><a href="https://interfantasy.ru/interaktivnaya-installyacziya.html" target="_blank" rel="noopener" aria-label="Интерактивная инсталляция — описание проекта (в новой вкладке)"><img src="https://interfantasy.ru/content/posters/iinstall.png" srcset="https://tramlex.github.io/interfantasy-preview/media/calculator-projects/iinstall-480.webp 480w, https://tramlex.github.io/interfantasy-preview/media/calculator-projects/iinstall-800.webp 800w, https://interfantasy.ru/content/posters/iinstall.png 1200w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1200" height="748" alt="Посетитель управляет проекцией на рельефном макете с помощью поворотного контроллера" loading="lazy"><div class="project-slide-caption"><p>Интерактив на выставке</p><h3>Интерактивная инсталляция</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="10 из 13"><a href="https://interfantasy.ru/interaktivnyij-videomepping.html" target="_blank" rel="noopener" aria-label="Интерактивный видеомэппинг — описание проекта (в новой вкладке)"><img src="https://interfantasy.ru/content/posters/videomapping.png" srcset="https://tramlex.github.io/interfantasy-preview/media/calculator-projects/videomapping-480.webp 480w, https://tramlex.github.io/interfantasy-preview/media/calculator-projects/videomapping-800.webp 800w, https://interfantasy.ru/content/posters/videomapping.png 1200w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1200" height="749" alt="Проекционное изображение на макете в проекте интерактивного видеомэппинга" loading="lazy"><div class="project-slide-caption"><p>Проекция и интерактив</p><h3>Интерактивный видеомэппинг</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="11 из 13"><a href="https://interfantasy.ru/videostena-v-arendu.html" target="_blank" rel="noopener" aria-label="Видеостена в аренду — описание проекта (в новой вкладке)"><img src="https://interfantasy.ru/content/posters/vidsten.png" srcset="https://tramlex.github.io/interfantasy-preview/media/calculator-projects/vidsten-480.webp 480w, https://tramlex.github.io/interfantasy-preview/media/calculator-projects/vidsten-800.webp 800w, https://interfantasy.ru/content/posters/vidsten.png 1200w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1200" height="749" alt="Видеостена с презентационным контентом в проекте InterFantasy" loading="lazy"><div class="project-slide-caption"><p>Экраны для презентаций</p><h3>Видеостена в аренду</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="12 из 13"><a href="https://interfantasy.ru/dvojnaya-gologramma-na-transportnoj-nedele.html" target="_blank" rel="noopener" aria-label="Двойная голограмма на Транспортной неделе — описание проекта (в новой вкладке)"><img src="https://interfantasy.ru/content/posters/tweek.jpg" srcset="https://tramlex.github.io/interfantasy-preview/media/calculator-projects/tweek-480.webp 480w, https://tramlex.github.io/interfantasy-preview/media/calculator-projects/tweek-800.webp 800w, https://interfantasy.ru/content/posters/tweek.jpg 1200w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1200" height="748" alt="Голографическая графика над макетом оборудования Восточного порта на Транспортной неделе" loading="lazy"><div class="project-slide-caption"><p>Голографическая презентация</p><h3>Двойная голограмма на Транспортной неделе</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li>
+<li class="project-slide" aria-label="13 из 13"><a href="https://interfantasy.ru/multimedijnaya-installyacziya.html" target="_blank" rel="noopener" aria-label="Мультимедийная инсталляция — описание проекта (в новой вкладке)"><img src="https://interfantasy.ru/content/posters/multiinstal.png" srcset="https://tramlex.github.io/interfantasy-preview/media/calculator-projects/multiinstal-480.webp 480w, https://tramlex.github.io/interfantasy-preview/media/calculator-projects/multiinstal-800.webp 800w, https://interfantasy.ru/content/posters/multiinstal.png 1200w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1400px) calc(100vw - 96px), 1320px" width="1200" height="748" alt="Проекционная презентация в мультимедийной инсталляции InterFantasy" loading="lazy"><div class="project-slide-caption"><p>Мультимедийные проекты</p><h3>Мультимедийная инсталляция</h3><span>Посмотреть проект <span class="sr-only">в новой вкладке</span></span></div></a></li></ul><div class="projects-controls"><span id="project-position" aria-live="polite" aria-atomic="true">1 / 13</span><div><button type="button" id="project-prev" aria-label="Предыдущий проект" aria-controls="project-track">Назад</button><button type="button" id="project-next" aria-label="Следующий проект" aria-controls="project-track">Далее</button></div></div><p class="projects-tab-note">Описание проекта откроется в новой вкладке. Калькулятор останется здесь.</p></section>
+    <section class="size-reference"><div><p class="kicker">Быстрый ориентир</p><h2>Популярные размеры</h2><p>Для выбранного формата <strong id="table-ratio">16:9</strong>. Нажмите на диагональ, чтобы подставить её в калькулятор.</p></div><div class="table-wrap"><table><caption class="sr-only">Размеры экранов в сантиметрах</caption><thead><tr><th scope="col">Диагональ</th><th scope="col">В см</th><th scope="col">Ширина</th><th scope="col">Высота</th></tr></thead><tbody id="size-table"><tr><td><button type="button" data-size="32" aria-label="Рассчитать экран 32 дюймов">32″</button></td><td>81,3 см</td><td>70,8 см</td><td>39,8 см</td></tr>
+<tr><td><button type="button" data-size="40" aria-label="Рассчитать экран 40 дюймов">40″</button></td><td>101,6 см</td><td>88,6 см</td><td>49,8 см</td></tr>
+<tr><td><button type="button" data-size="43" aria-label="Рассчитать экран 43 дюймов">43″</button></td><td>109,2 см</td><td>95,2 см</td><td>53,5 см</td></tr>
+<tr><td><button type="button" data-size="50" aria-label="Рассчитать экран 50 дюймов">50″</button></td><td>127 см</td><td>110,7 см</td><td>62,3 см</td></tr>
+<tr class="selected"><td><button type="button" data-size="55" aria-label="Рассчитать экран 55 дюймов">55″</button></td><td>139,7 см</td><td>121,8 см</td><td>68,5 см</td></tr>
+<tr><td><button type="button" data-size="65" aria-label="Рассчитать экран 65 дюймов">65″</button></td><td>165,1 см</td><td>143,9 см</td><td>80,9 см</td></tr>
+<tr><td><button type="button" data-size="75" aria-label="Рассчитать экран 75 дюймов">75″</button></td><td>190,5 см</td><td>166 см</td><td>93,4 см</td></tr>
+<tr><td><button type="button" data-size="85" aria-label="Рассчитать экран 85 дюймов">85″</button></td><td>215,9 см</td><td>188,2 см</td><td>105,8 см</td></tr></tbody></table></div></section>
+    <article class="screen-guide" aria-label="Справочник по размерам экранов">
+<nav class="guide-nav" aria-label="В справочнике"><a href="#guide-2">Дюймы в сантиметры</a><a href="#guide-3">Форматы</a><a href="#guide-4">Расстояние</a><a href="#guide-6">Вопросы и ответы</a></nav>
+<details class="guide-disclosure guide-intro" id="guide-intro"><summary><h2>От чего зависят размеры экрана</h2></summary><div class="guide-body"><p>
+    Современные телевизоры выпускаются в <strong>разных соотношениях сторон</strong>: классическое <strong>16:9</strong> (широкий формат), старое <strong>4:3</strong> (стандарт), ультраширокий <strong>21:9</strong> и даже квадратные <strong>1:1</strong> мониторы. Диагональ <strong>32 дюйма</strong> для формата 16:9 даёт ширину <strong>71 см</strong>, а для 4:3 — только <strong>65 см</strong>! Без калькулятора <strong>не рассчитаешь точно</strong>.
+</p></div></details>
+<details class="guide-disclosure" id="screen-size-reference"><summary><h2>Популярные форматы и ходовые размеры экранов ТВ</h2></summary><div class="guide-body"><div class="guide-table original-table-wrap" role="region" aria-label="Размеры экранов 16:9 и 4:3" tabindex="0"><table class="original-size-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Соотношение сторон</th>
+                        <th scope="col">Диагональ (дюймы / см)</th>
+                        <th scope="col">Ширина (дюймы / см)</th>
+                        <th scope="col">Высота (дюймы / см)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>16:9</td>
+                        <td>32" / 81 см</td>
+                        <td>28" / 71 см</td>
+                        <td>15.7" / 40 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>40" / 102 см</td>
+                        <td>34.9" / 88.6 см</td>
+                        <td>19.6" / 49.8 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>42" / 107 см</td>
+                        <td>36.6" / 93 см</td>
+                        <td>20.6" / 52.3 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>43" / 109 см</td>
+                        <td>37.6" / 95.2 см</td>
+                        <td>21.2" / 53.6 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>50" / 127 см</td>
+                        <td>43.6" / 110.7 см</td>
+                        <td>24.5" / 62.3 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>55" / 140 см</td>
+                        <td>47.9" / 121 см</td>
+                        <td>27" / 68.5 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>60" / 152 см</td>
+                        <td>52.2" / 132 см</td>
+                        <td>29.4" / 74.7 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>65" / 165 см</td>
+                        <td>56.5" / 143.5 см</td>
+                        <td>31.8" / 80.7 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>70" / 178 см</td>
+                        <td>60.8" / 154.9 см</td>
+                        <td>34.2" / 86.9 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>75" / 190 см</td>
+                        <td>65.6" / 166 см</td>
+                        <td>36.8" / 93.5 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>80" / 203 см</td>
+                        <td>69.8" / 177.3 см</td>
+                        <td>39.3" / 99.8 см</td>
+                    </tr>
+                    <tr>
+                        <td>16:9</td>
+                        <td>85" / 216 см</td>
+                        <td>74.3" / 188.7 см</td>
+                        <td>41.8" / 106.2 см</td>
+                    </tr>
+                    <tr>
+                        <td>4:3</td>
+                        <td>32" / 81 см</td>
+                        <td>25.6" / 65 см</td>
+                        <td>19.2" / 48.8 см</td>
+                    </tr>
+                    <tr>
+                        <td>4:3</td>
+                        <td>40" / 102 см</td>
+                        <td>32" / 81.3 см</td>
+                        <td>24" / 60.9 см</td>
+                    </tr>
+                    <tr>
+                        <td>4:3</td>
+                        <td>50" / 127 см</td>
+                        <td>40" / 101.6 см</td>
+                        <td>30" / 76.2 см</td>
+                    </tr>
+                    <tr>
+                        <td>4:3</td>
+                        <td>60" / 152 см</td>
+                        <td>48" / 121.9 см</td>
+                        <td>36" / 91.4 см</td>
+                    </tr>
+                </tbody>
+            </table></div><p class="table-note">Таблица исходной страницы: значения округлены. Для точного расчёта используйте калькулятор выше. 1 дюйм = 2,54 сантиметра.</p></div></details>
+<details class="guide-disclosure" id="guide-1"><summary><h2>Как пользоваться калькулятором диагонали экрана</h2></summary><div class="guide-body">
+<p>Наш онлайн-калькулятор позволяет быстро перевести диагональ экрана из дюймов в сантиметры и обратно. Для этого:</p>
+<ol>
+<li>Введите известное значение диагонали в поле &laquo;Дюймы&raquo; или &laquo;Сантиметры&raquo;.</li>
+<li>Выберите соотношение сторон экрана (16:9, 4:3, 21:9 или другое).</li>
+<li>Калькулятор автоматически рассчитает ширину и высоту экрана в сантиметрах и дюймах.</li>
+</ol>
+<p>Инструмент подходит для телевизоров, компьютерных мониторов, проекторов, смартфонов и планшетов. Вы можете использовать его при выборе новой техники или для проверки размеров уже имеющегося устройства.</p>
+</div></details><details class="guide-disclosure" id="guide-2"><summary><h2>Формула перевода дюймов в сантиметры</h2></summary><div class="guide-body">
+<p>Перевод диагонали из дюймов в сантиметры выполняется по простой формуле:</p>
+<p><strong>1 дюйм = 2,54 см</strong></p>
+<p>Для расчёта умножьте значение диагонали в дюймах на 2,54. Например:</p>
+<ul>
+<li>32 дюйма &times; 2,54 = 81,28 см</li>
+<li>55 дюймов &times; 2,54 = 139,7 см</li>
+<li>75 дюймов &times; 2,54 = 190,5 см</li>
+</ul>
+<p>Для обратного перевода (из сантиметров в дюймы) разделите значение в сантиметрах на 2,54:</p>
+<ul>
+<li>100 см &divide; 2,54 = 39,37 дюйма</li>
+<li>140 см &divide; 2,54 = 55,12 дюйма</li>
+</ul>
+</div></details><details class="guide-disclosure" id="guide-3"><summary><h2>Популярные форматы экранов: 16:9, 4:3, 21:9</h2></summary><div class="guide-body">
+<p>Соотношение сторон экрана &mdash; это пропорция между шириной и высотой. Самые распространённые форматы:</p>
+<h3>16:9 &mdash; стандарт для ТВ и мониторов</h3>
+<ul>
+<li>Используется в большинстве современных телевизоров</li>
+<li>Full HD, 4K, 8K контент</li>
+<li>Идеально для фильмов, сериалов, YouTube</li>
+</ul>
+<h3>4:3 &mdash; классический формат</h3>
+<ul>
+<li>Старые телевизоры и мониторы</li>
+<li>Планшеты (например, iPad)</li>
+<li>Подойдёт для офисных задач и чтения</li>
+</ul>
+<h3>21:9 &mdash; ультраширокий формат</h3>
+<ul>
+<li>Игровые и профессиональные мониторы</li>
+<li>Кинематографическое соотношение</li>
+<li>Удобно для многозадачности и монтажа видео</li>
+</ul>
+<p>Выбор формата зависит от ваших задач: для развлечений &mdash; 16:9, для работы &mdash; 4:3 или 21:9.</p>
+</div></details><details class="guide-disclosure" id="guide-4"><summary><h2>Как выбрать диагональ экрана под расстояние</h2></summary><div class="guide-body">
+<p>Правильный выбор диагонали зависит от расстояния, с которого вы будете смотреть на экран.</p>
+<h3>Рекомендации для телевизоров:</h3>
+<div class="guide-table"><table>
+<thead>
+<tr>
+<th scope="col">
+<p><strong>Расстояние до экрана</strong></p>
+</th>
+<th scope="col">
+<p><strong>Рекомендуемая диагональ</strong></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p>1,5&ndash;2 метра</p>
+</td>
+<td>
+<p>32&ndash;43 дюйма (81&ndash;109 см)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>2&ndash;2,5 метра</p>
+</td>
+<td>
+<p>43&ndash;55 дюймов (109&ndash;140 см)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>2,5&ndash;3 метра</p>
+</td>
+<td>
+<p>55&ndash;65 дюймов (140&ndash;165 см)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>3&ndash;4 метра</p>
+</td>
+<td>
+<p>65&ndash;75 дюймов (165&ndash;190 см)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>4+ метра</p>
+</td>
+<td>
+<p>75+ дюймов (190+ см)</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Для компьютерных мониторов:</h3>
+<div class="guide-table"><table>
+<thead>
+<tr>
+<th scope="col">
+<p><strong>Расстояние до монитора</strong></p>
+</th>
+<th scope="col">
+<p><strong>Рекомендуемая диагональ</strong></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p>50&ndash;70 см</p>
+</td>
+<td>
+<p>24&ndash;27 дюймов (61&ndash;69 см)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>70&ndash;90 см</p>
+</td>
+<td>
+<p>27&ndash;32 дюйма (69&ndash;81 см)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>90+ см</p>
+</td>
+<td>
+<p>32+ дюйма (81+ см)</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>Слишком большой экран на близком расстоянии вызовет дискомфорт для глаз, а слишком маленький &mdash; придётся напрягаться, чтобы рассмотреть детали.</p>
+</div></details><details class="guide-disclosure" id="guide-5"><summary><h2>Как измерить диагональ экрана</h2></summary><div class="guide-body">
+<p>Диагональ экрана измеряется <strong>от одного угла до противоположного</strong> (по прямой линии через центр).</p>
+<p><strong>Важно:</strong></p>
+<ul>
+<li>Не измеряйте по ширине или высоте &mdash; только по диагонали</li>
+<li>Измеряйте сам экран (без рамки корпуса)</li>
+<li>Результат в сантиметрах разделите на 2,54 для получения дюймов</li>
+</ul>
+<p><strong>Пример:</strong><br /> Вы измерили диагональ и получили 109 см.<br /> 109 &divide; 2,54 = 42,9 дюйма &rarr; это экран 43"</p>
+
+</div></details><details class="guide-disclosure" id="guide-6"><summary><h2>Частые вопросы о диагонали экрана (FAQ)</h2></summary><div class="guide-body">
+<details><summary>Как перевести дюймы в сантиметры?</summary><p>Умножьте значение в дюймах на 2,54. Например: 50" &times; 2,54 = 127 см.</p></details>
+<details><summary>Какая диагональ лучше для расстояния 2 метра?</summary><p>Оптимально 43&ndash;50 дюймов (109&ndash;127 см) для полного погружения без нагрузки на глаза.</p></details>
+<details><summary>Чем отличается 16:9 от 4:3?</summary><p>16:9 &mdash; более широкий формат (современные ТВ), 4:3 &mdash; более квадратный (старые мониторы, планшеты).</p></details>
+<details><summary>Как узнать ширину и высоту экрана?</summary><p>Используйте наш калькулятор: введите диагональ и соотношение сторон &mdash; получите точные размеры.</p></details>
+<details><summary>Диагональ 55 дюймов &mdash; это сколько в сантиметрах?</summary><p>55" &times; 2,54 = 139,7 см (округляется до 140 см).</p></details>
+<details><summary>Можно ли использовать калькулятор для проекторов?</summary><p>Да, калькулятор подходит для любых экранов с известным соотношением сторон.</p></details>
+
+</div></details><details class="guide-disclosure" id="guide-7"><summary><h2>Почему важно знать точные размеры экрана</h2></summary><div class="guide-body">
+<p>Знание реальной ширины и высоты экрана помогает:</p>
+<ul>
+<li><strong>Правильно подобрать мебель</strong> под телевизор или монитор</li>
+<li><strong>Рассчитать расстояние</strong> для комфортного просмотра</li>
+<li><strong>Выбрать крепление</strong> (настенное, настольное)</li>
+<li><strong>Спланировать размещение</strong> в интерьере</li>
+</ul>
+<p>Используйте наш калькулятор диагонали, чтобы получить точные размеры и избежать ошибок при покупке техники.</p></div></details>
+</article>
+    <aside class="project-note"><div><p class="kicker">Экран — часть большой идеи</p><h2>Подберём решение для вашего пространства</h2></div><a href="mailto:hello@interfantasy.ru" class="contact-link">Обсудить проект</a></aside>
+  </main><footer class="calc-footer"><a class="brand" href="https://tramlex.github.io/interfantasy-preview/">interfantasy</a><a href="mailto:hello@interfantasy.ru">hello@interfantasy.ru</a><span>© InterFantasy, 2026</span></footer>
+  <noscript><p class="no-js">Для расчёта размеров включите JavaScript в браузере.</p></noscript>
+<script>(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const inputs = [...document.querySelectorAll('.dimension input')];
+  let diagonal = 55 * 2.54;
+  let source = { dimension: 'diagonal', cm: diagonal };
+  let ratio = [16, 9];
+  let precision = 1;
+  const sizes = [32, 40, 43, 50, 55, 65, 75, 85];
+  const format = n => n.toLocaleString('ru-RU', {minimumFractionDigits: 0, maximumFractionDigits: precision, useGrouping:false});
+  const geometry = d => ({diagonal:d, width:d * ratio[0] / Math.hypot(...ratio), height:d * ratio[1] / Math.hypot(...ratio)});
+  function fromSource() {
+    diagonal = source.cm * (source.dimension === 'diagonal' ? 1 : Math.hypot(...ratio) / ratio[source.dimension === 'width' ? 0 : 1]);
+  }
+  function render(active) {
+    const values = geometry(diagonal);
+    for (const input of inputs) {
+      const [dimension, unit] = input.id.split('-');
+      if(input !== active) input.value = format(values[dimension] / (unit === 'in' ? 2.54 : 1));
+    }
+    const w = Math.min(320, 180 * ratio[0] / ratio[1]);
+    const h = w * ratio[1] / ratio[0];
+    const x = 240 - w / 2, y = 144 - h / 2;
+    for(const [key, value] of Object.entries({x,y,width:w,height:h})) $('screen-rect').setAttribute(key,value);
+    $('diagonal-line').setAttribute('d',`M${x} ${y+h}L${x+w} ${y}`);
+    $('width-line').setAttribute('d',`M${x} ${y+h+16}v12H${x+w}v-12`);
+    $('diagram-width').setAttribute('y',y+h+53);
+    $('height-line').setAttribute('d',`M${x+w+14} ${y}h12V${y+h}h-12`);
+    $('diagram-height').setAttribute('x',x+w+50);
+    $('diagram-height').setAttribute('transform',`rotate(-90 ${x+w+50} 144)`);
+    $('diagram-diagonal').textContent = format(diagonal / 2.54) + '″';
+    $('diagram-diagonal-cm').textContent = format(diagonal) + ' см';
+    $('diagram-width').textContent = format(values.width) + ' см';
+    $('diagram-height').textContent = format(values.height) + ' см';
+    $('diagram-title').textContent = `Экран ${ratio.join(':')}: диагональ ${format(diagonal)} см, ширина ${format(values.width)} см, высота ${format(values.height)} см`;
+    document.querySelectorAll('[data-size]').forEach(b => b.setAttribute('aria-pressed',String(Math.abs(Number(b.dataset.size) - diagonal / 2.54) < 0.001)));
+    $('size-table').replaceChildren(...sizes.map(size => {
+      const dims = geometry(size * 2.54), row = document.createElement('tr');
+      row.classList.toggle('selected',Math.abs(size - diagonal / 2.54) < 0.001);
+      const cell = document.createElement('td'), button = document.createElement('button');
+      button.type = 'button'; button.dataset.size = size; button.textContent = size + '″';
+      button.setAttribute('aria-label',`Рассчитать экран ${size} дюймов`); cell.append(button); row.append(cell);
+      for(const dim of ['diagonal','width','height']) { const td = document.createElement('td'); td.textContent = format(dims[dim]) + ' см'; row.append(td); }
+      return row;
+    }));
+  }
+  function status(error) {
+    $('input-status').textContent = error || 'Можно изменить любое из шести значений.';
+    $('input-status').classList.toggle('error',Boolean(error));
+  }
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+      const raw = input.value.trim().replace(',', '.');
+      const n = Number(raw);
+      const valid = /^\d+(\.\d*)?$/.test(raw) && Number.isFinite(n) && n > 0 && n <= 100000;
+      input.setAttribute('aria-invalid',String(!valid));
+      if(!valid) {status(raw === '' ? 'Введите размер больше нуля.' : 'Введите число больше нуля и не более 100 000.');return;}
+      inputs.forEach(i => i.removeAttribute('aria-invalid'));
+      const [dimension, unit] = input.id.split('-');
+      source = {dimension, cm:n * (unit === 'in' ? 2.54 : 1)};
+      fromSource(); status(); render(input);
+    });
+    input.addEventListener('blur', () => { if(input.getAttribute('aria-invalid') !== 'true') render(); });
+    input.addEventListener('keydown', e => {if(e.key === 'Enter') input.blur();});
+  });
+  document.querySelectorAll('input[name=ratio]').forEach(input => input.addEventListener('change', () => {
+    ratio = input.value.split(':').map(Number);
+    const names = {'16:9':'Широкоформатный','4:3':'Классический','21:9':'Ультраширокий','1:1':'Квадратный'};
+    $('format-caption').textContent = input.value + ' · ' + names[input.value];
+    $('table-ratio').textContent = input.value;
+    fromSource(); inputs.forEach(i => i.removeAttribute('aria-invalid')); status(); render();
+  }));
+  $('precision').addEventListener('change', e => {precision = Number(e.target.value);render();});
+  document.addEventListener('click', e => {
+    const button = e.target.closest('button[data-size]'); if(!button) return;
+    source = {dimension:'diagonal',cm:Number(button.dataset.size)*2.54}; fromSource();
+    inputs.forEach(i => i.removeAttribute('aria-invalid')); status(); render();
+  });
+  // Native disclosures retain the complete guide in HTML for readers and crawlers.
+  function revealGuideTarget(scroll = false) {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { return; }
+    if (!target || !target.closest('.screen-guide')) return;
+    for (let node = target; node; node = node.parentElement) {
+      if (node instanceof HTMLDetailsElement) node.open = true;
+    }
+    if (scroll) requestAnimationFrame(() => target.scrollIntoView({block:'start',behavior:'instant'}));
+  }
+  document.querySelectorAll('.guide-nav a').forEach(link => link.addEventListener('click', () => {
+    const target = document.getElementById(link.hash.slice(1));
+    if (target instanceof HTMLDetailsElement) target.open = true;
+    requestAnimationFrame(() => target?.scrollIntoView({block:'start',behavior:'instant'}));
+  }));
+  window.addEventListener('hashchange', () => revealGuideTarget(true));
+  revealGuideTarget(true);
+
+  const track = $('project-track');
+  if (track) {
+    const slides = [...track.querySelectorAll('.project-slide')];
+    let current = 0;
+    let frame;
+    function updatePosition() {
+      current = Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / track.clientWidth)));
+      const name = slides[current].querySelector('h3').textContent;
+      $('project-position').textContent = `${current + 1} / ${slides.length}`;
+      $('project-position').setAttribute('aria-label', `Проект ${current + 1} из ${slides.length}: ${name}`);
+      slides.forEach((slide,index) => {
+        // Keep off-screen project links out of the tab order; native scroll remains available.
+        slide.querySelector('a').tabIndex = index === current ? 0 : -1;
+      });
+    }
+    function move(direction) {
+      const next = (current + direction + slides.length) % slides.length;
+      track.scrollTo({left:next * track.clientWidth,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    }
+    $('project-prev').addEventListener('click', () => move(-1));
+    $('project-next').addEventListener('click', () => move(1));
+    track.addEventListener('scroll', () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(updatePosition);
+    }, {passive:true});
+    track.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+        e.preventDefault(); move(e.key === 'ArrowLeft' ? -1 : 1);
+      }
+    });
+    new ResizeObserver(() => {
+      track.scrollTo({left:current * track.clientWidth,behavior:'instant'});
+    }).observe(track);
+    updatePosition();
+  }
+  render();
+})();
+</script></body></html>
